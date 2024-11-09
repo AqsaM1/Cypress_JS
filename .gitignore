@@ -1,0 +1,9 @@
+# Ignore node_modules (Node.js project)
+node_modules/
+.DS_Store/
+
+# Ignore Cypress results and screenshots
+cypress/screenshots/
+cypress/videos/
+cypress/reports
+

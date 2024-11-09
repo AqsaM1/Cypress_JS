@@ -1,0 +1,15 @@
+{
+  "validUserDetails":{
+
+    "username": "selenium@qa",
+    "password": "qa@1234"
+  },
+  "invalidUserDetails":{
+    "username": "selenium",
+    "password": "qa@123"
+
+  }
+}
+  
+
+ 
