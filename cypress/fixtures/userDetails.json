@@ -8,7 +8,13 @@
     "username": "selenium",
     "password": "qa@123"
 
+  },
+  "userDetails":{
+
+    "username": "QAAutomationLabs",
+    "job": "QA Automation Engg"
   }
+
 }
   
 
