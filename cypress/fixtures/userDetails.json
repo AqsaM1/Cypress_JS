@@ -1,21 +1,14 @@
 {
-  "validUserDetails":{
-
+  "validUserDetails": {
     "username": "selenium@qa",
     "password": "qa@1234"
   },
-  "invalidUserDetails":{
+  "invalidUserDetails": {
     "username": "selenium",
     "password": "qa@123"
-
   },
-  "userDetails":{
-
+  "userDetails": {
     "username": "QAAutomationLabs",
     "job": "QA Automation Engg"
   }
-
 }
-  
-
- 

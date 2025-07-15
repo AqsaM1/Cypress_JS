@@ -1,18 +1,17 @@
-
-
 let userDetails;
-describe('Api Test', ()=>{
-
-  beforeEach("load fixture",function() { 
-    cy.fixture("userDetails").then((data)=>{
-      userDetails=data
-    })
-  })
-    
-  it("GET API testing Using Cypress API Plugin", () => {
-    cy.request("GET", "https://reqres.in/api/users?page=2").should((response) => {
-      expect(response.status).to.eq(200);
+describe("Api Test", () => {
+  beforeEach("load fixture", function () {
+    cy.fixture("userDetails").then((data) => {
+      userDetails = data;
     });
+  });
+
+  it("GET API testing Using Cypress API Plugin", () => {
+    cy.request("GET", "https://reqres.in/api/users?page=2").should(
+      (response) => {
+        expect(response.status).to.eq(200);
+      },
+    );
   });
 
   it("POST API testing Using Cypress API Plugin", () => {
@@ -37,6 +36,4 @@ describe('Api Test', ()=>{
       expect(response.status).to.eq(204);
     });
   });
-
-})
-
+});

@@ -30,6 +30,19 @@ npm install cypress --save-dev
 #To launch the Cypress Test Runner:
 npx cypress open
 
+#Run test headless
+npx cypress run
+
+#Run test headless with specific browser
+npx cypress run --browser chrome
+
+# Run specific spec file
+npx cypress run --spec "cypress/e2e/verifyLogin.cy.js"
+
+#Run multiple spec files
+npx cypress run --spec "cypress/e2e/**/*.cy.js"
+
+
 #This will create a default folder structure like:
 cypress/
 ├── e2e/          # Test files
@@ -47,4 +60,14 @@ project-root/
 ├── node_modules/        # Installed dependencies
 ├── package.json         # Project metadata and scripts
 ├── cypress.config.js    # Cypress configuration file
+
+
+#Lint Cypress test files and auto-fix common issues:
+npm run lint:cypress
+
+#Format all project files (JS, JSON, Markdown, etc.) with Prettier:
+npm run format
+
+#All generated test data is centralized in: Used fakerjs for dummy data generation
+cypress/support/fakerUser.js
 
