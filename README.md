@@ -1,4 +1,4 @@
-# Cypress_JS
+# Cypress + Javscript + UI Automation + API Automation
 
 This project sets up end-to-end testing using Cypress for JavaScript applications.
 
