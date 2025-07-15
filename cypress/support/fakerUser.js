@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker";
 
-export const fakerUser  = () => ({
+export const fakerUser = () => ({
   firstName: faker.person.firstName(),
   lastName: faker.person.lastName(),
   phoneNumber: faker.phone.number("###-###-####"),
@@ -13,4 +13,4 @@ export const fakerUser  = () => ({
   userName: faker.internet.email(),
   password: faker.internet.password(12),
 });
-fakerUser.confirmPassword = fakerUser.password; 
+fakerUser.confirmPassword = fakerUser.password;

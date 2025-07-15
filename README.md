@@ -71,3 +71,4 @@ npm run format
 #All generated test data is centralized in: Used fakerjs for dummy data generation
 cypress/support/fakerUser.js
 
+```

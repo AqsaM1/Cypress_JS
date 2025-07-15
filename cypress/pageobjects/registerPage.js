@@ -1,5 +1,3 @@
-import { couch } from "globals";
-
 class registerPage {
   elements = {
     firstName: () => cy.get('input[name="firstName"]'),
@@ -35,16 +33,14 @@ class registerPage {
     this.elements.emailAddress().type(emailAddress);
   }
 
-  
   enterAddress(address) {
     this.elements.address().clear();
     this.elements.address().type(address);
   }
-   enterCity(city) {
+  enterCity(city) {
     this.elements.city().clear();
     this.elements.city().type(city);
   }
-
 
   enterPostalCode(phoneNumber) {
     this.elements.postalCode().clear();
@@ -68,11 +64,7 @@ class registerPage {
     this.elements.confirmPassword().clear();
     this.elements.confirmPassword().type(confirmPassword);
   }
-  enterConfirmPassword(country) {
-    this.elements.country().clear();
-    this.elements.country().type(country);
-  }
-
+ 
   clickSubmit() {
     this.elements.submitButton().click();
   }
