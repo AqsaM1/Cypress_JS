@@ -1,10 +1,18 @@
 pipeline {
     agent any
+    tools {
+            nodejs "Node 18"
+    }
     stages {
-        stage('Build') { 
+        stage('Install Dependencies') {
             steps {
                 sh 'npm install'
-                sh 'npx cypress run' 
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'npx cypress run'
             }
         }
     }
