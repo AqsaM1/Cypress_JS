@@ -1,6 +1,7 @@
 # Ignore node_modules (Node.js project)
 node_modules/
 .DS_Store/
+package-lock.json/
 
 # Ignore Cypress results and screenshots
 cypress/screenshots/
