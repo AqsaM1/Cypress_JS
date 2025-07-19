@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const allureWriter = require("cypress-allure-plugin/writer");
 
 module.exports = defineConfig({
   e2e: {
@@ -12,6 +13,11 @@ module.exports = defineConfig({
     env: {
       apiUrl: "",
       authToken: "",
+    },
+    setupNodeEvents(on, config) {
+      require("cypress-allure-plugin")(on, config);
+      allureWriter(on, config);
+      return config;
     },
     defaultCommandTimeout: 10000,
     pageLoadTimeout: 600000,
