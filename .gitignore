@@ -4,7 +4,7 @@ node_modules/
 package-lock.json/
 
 # Ignore Cypress results and screenshots
+cypress/mochawesome-report/
 cypress/screenshots/
-cypress/videos/
-cypress/reports
+cypress/video/
 

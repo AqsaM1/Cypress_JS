@@ -15,9 +15,9 @@ module.exports = defineConfig({
     },
     defaultCommandTimeout: 10000,
     pageLoadTimeout: 600000,
-    screenshotsFolder: "",
+    screenshotsFolder: "cypress/screenshots",
     screenshotOnRunFailure: true,
-    videosFolder: "",
+    videosFolder: "cypress/video",
     video: true,
     specPattern: "cypress/e2e/**/*.cy.js",
     reporter: "mochawesome",
@@ -25,7 +25,7 @@ module.exports = defineConfig({
       reporterDir: "cypress/reports",
       overwrite: false,
       html: true,
-      json: true,
+      json: false,
     },
 
     // setupNodeEvents(on, config) {
