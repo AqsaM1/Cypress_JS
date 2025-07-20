@@ -6,13 +6,14 @@ class registerPage {
     emailAddress: () => cy.get('input[id="userName"]'),
     address: () => cy.get('input[name="address1"]'),
     city: () => cy.get('input[name="city"]'),
-    stateProvince: () => cy.get('input[id="state"]'),
-    postalCode: () => cy.get('input[id="postalCode"]'),
+    stateProvince: () => cy.get('input[name="state"]'),
+    postalCode: () => cy.get('input[name="postalCode"]'),
     country: () => cy.get('select[name="country"]'),
     userName: () => cy.get('input[id="email"]'),
     password: () => cy.get('input[name="password"]'),
     confirmPassword: () => cy.get('input[name="confirmPassword"]'),
     submitButton: () => cy.get('input[name="submit"]'),
+    signupSuccessful: () => cy.get("td > :nth-child(2) > font > a"),
   };
   enterFirstName(firstName) {
     this.elements.firstName().clear();
@@ -52,8 +53,7 @@ class registerPage {
     this.elements.stateProvince().type(stateProvince);
   }
   enterCountry(country) {
-    this.elements.country().clear();
-    this.elements.country().type(country);
+    this.elements.country().select(country);
   }
   enterUserName(userName) {
     this.elements.userName().clear();
@@ -64,9 +64,12 @@ class registerPage {
     this.elements.confirmPassword().clear();
     this.elements.confirmPassword().type(confirmPassword);
   }
- 
+
   clickSubmit() {
     this.elements.submitButton().click();
+  }
+  signupSuccessful() {
+    return this.elements.signupSuccessful();
   }
 }
 

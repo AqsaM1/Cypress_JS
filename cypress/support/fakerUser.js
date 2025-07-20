@@ -1,5 +1,11 @@
 import { faker } from "@faker-js/faker";
-
+const allowedCountries = [
+  "UNITED STATES",
+  "CANADA",
+  "INDIA",
+  "GERMANY",
+  "AUSTRALIA",
+];
 export const fakerUser = () => ({
   firstName: faker.person.firstName(),
   lastName: faker.person.lastName(),
@@ -9,7 +15,7 @@ export const fakerUser = () => ({
   city: faker.location.city(),
   stateProvince: faker.location.state(),
   postalCode: faker.location.zipCode("#####"),
-  country: faker.location.country(),
+  country: faker.helpers.arrayElement(allowedCountries),
   userName: faker.internet.email(),
   password: faker.internet.password(12),
 });
